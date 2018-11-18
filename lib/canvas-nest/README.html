@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <title>a little bull&#39;s blog</title>
+  <meta name="author" content="hug2wisdom">
+  
+  <meta name="description" content="wisdom is a new sexy.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  
+  <meta property="og:site_name" content="a little bull&#39;s blog">
+
+  <link rel="alternate" href="/atom.xml" title="a little bull&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- 被墙 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script> -->
+    <script src="//lib.sinaapp.com/js/jquery/1.8.3/jquery.min.js"></script>
+  
+  
+
+  <meta property="wb:webmaster" content="e9d0b5d9cad42cf4">
+  <meta property="qc:admins" content="214253361253561667">
+</head>
+</html>
+
+<body>
+  <div class="wrapper">
+    <header id="header"><div class="title">
+  <h1><a href="/">a little bull&#39;s blog</a></h1>
+  <p><a href="/">wisdom is a new sexy</a></p>
+</div>
+<!--
+<div>
+<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+ <input style="width:60px;background-color:transparent;text-align:center; border-width:0px;border-top-style: none; border-right-style: none; border-left-style: none; border-bottom-style: none; "  type="search" name="q" id="search" autocomplete="off" autocorrect="off" autocapitalize="off" maxlength="20" placeholder="s" />
+ <input type="hidden" name="q" value="site:laixiezi.com">
+</form>
+</div>
+-->
+<nav class="nav">
+  <ul>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+      <li><a href="/books">Books</a></li>
+    
+      <li><a href="/movies">Movies</a></li>
+    
+      <li><a href="/about">About</a></li>
+    
+      <li><a href="/honey">Honey</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+    <div class="content"><article class="page">
+  <header>
+    
+    
+  
+    <h1 class="title"></h1>
+  
+
+  </header>
+  
+  <div class="entry">
+    
+      <h1 align="center"><a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas-nest.js</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
+
+<h1 align="center">Installation</h1>
+
+<h2 align="center">Step 1 &rarr; Go to NexT dir</h2>
+
+<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">bower.json  _config.yml  docs  gulpfile.coffee  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span>  <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 align="center">Step 2 &rarr; Get module</h2>
+
+<p>Install module to <code>source/lib</code> directory:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/theme-next-canvas-nest <span class="built_in">source</span>/lib/canvas-nest</span><br></pre></td></tr></table></figure>
+<h2 align="center">Step 3 &rarr; Set it up</h2>
+
+<p>Enable module in <strong>NexT</strong> <code>_config.yml</code> file:</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">canvas_nest:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  onmobile:</span> <span class="literal">true</span> <span class="comment"># display on mobile or not</span></span><br><span class="line"><span class="attr">  color:</span> <span class="string">'0,0,255'</span> <span class="comment"># RGB values, use ',' to separate</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">0.5</span> <span class="comment"># the opacity of line: 0~1</span></span><br><span class="line"><span class="attr">  zIndex:</span> <span class="bullet">-1</span> <span class="comment"># z-index property of the background</span></span><br><span class="line"><span class="attr">  count:</span> <span class="number">99</span> <span class="comment"># the number of lines</span></span><br></pre></td></tr></table></figure>
+<p><strong>And, if you wants to use the CDN, then need to set:</strong></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">vendors:</span></span><br><span class="line">  <span class="string">...</span></span><br><span class="line"><span class="attr">  canvas_nest:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js</span></span><br><span class="line"><span class="attr">  canvas_nest_nomobile:</span> <span class="string">//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest-nomobile.min.js</span></span><br></pre></td></tr></table></figure>
+<h1 align="center">Update</h1>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/canvas-nest</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
+
+    
+  </div>
+  <footer>
+    
+      
+      
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+
+<!-- wumii Button BEGIN -->
+<div style="margin:0px auto; padding-left:23px; text-align:center;">
+	
+	
+
+	<script type="text/javascript" id="wumiiRelatedItems"></script>
+	<script type="text/javascript">
+	    var wumiiPermaLink = "http://ibruce.info/lib/canvas-nest/README.html"; //请用代码生成文章永久的链接
+	    var wumiiTitle = ""; //请用代码生成文章标题
+	    var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
+	    var wumiiCategories = []; //请用代码生成文章分类，分类名放在 JSONArray 中，如: ["分类1", "分类2"]
+	    var wumiiSitePrefix = "http://ibruce.info/";
+	    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
+	</script>
+	<script type="text/javascript" src="http://widget.wumii.cn/ext/relatedItemsWidget"></script>
+	<!--
+	<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
+	    <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
+	</a>
+	-->
+</div>
+<!-- wumii Button END -->
+
+<!-- UJian Button BEGIN -->
+	<div class="ujian-hook" style="padding-left: 17px;"></div>
+	<script type="text/javascript">var ujian_config = {num:6,picSize:83,textHeight:45};</script>
+	<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=1893018"></script>
+<!-- UJian Button END -->
+
+<!-- baidu tuijian BEGIN -->
+<!-- <div id="hm_t_22763"></div> -->
+<!-- baidu tuijian BEGIN -->
+<!--	<div style="padding-left: 17px;"> -->
+<!--		<script src="http://wm.lrswl.com/page/s.php?s=103186&w=640&h=60"></script> -->
+<!--	</div> -->
+
+
+</div>
+  </div>
+  <div class="widget-wrapper">
+    <aside id="sidebar">
+  
+  
+    
+      
+      
+
+<div class="widget tag first">
+  <h3 class="title">Categories</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/123/">123</a><small>1</small></li>
+  
+    <li><a href="/categories/123/456/">456</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+    
+      
+      
+
+<div class="widget tagcloud">
+  <h3 class="title">Tag Cloud</h3>
+  <div class="entry">
+  <!-- 
+  <a href="/tags/hha/" style="font-size: 10px;">hha</a>
+  -->
+  <a href="/tags/hha/" style="font-size: 10px;">hha</a>
+  </div>
+</div>
+
+    
+      
+      
+
+<div class="widget recent-posts">
+  <h3 class="title">Recent Posts</h3>
+  <ul class="entry">
+    
+      <li>
+        <a href="/2018/11/17/hello-world/">Hello World</a>
+      </li>
+    
+  </ul>
+</div>
+
+    
+  
+</aside>
+<div class="clearfix"></div>
+  </div>
+  <footer id="footer"><div class="theme-copyright">
+ &copy; 2013 - 2018 <a href="/">hug2wisdom</a>
+ |
+ produce by <a href="http://bruce-sha.github.io" target="_blank">sha</a>
+ |
+ <!--
+ <font id="counter"></font>
+ -->
+ <span id="busuanzi_container_site_pv">Total <a href="//busuanzi.ibruce.info" target="_blank"><span id="busuanzi_value_site_pv"></span></a></span> Viewers
+</div>
+<!--
+<div class="copyright">
+ <font id="counter"></font>
+ 版权所有
+  
+  &copy; 2013-2018 <a href="/">hug2wisdom</a>
+  
+</div>
+<div class="theme-copyright">
+  Theme by <a href="http://heroicyang.com" target="_blank">Heroic Yang</a>
+   | 
+  Redesign by <a href="http://bruce-sha.github.io" target="_blank">Bruce Sha</a>
+</div>
+-->
+<div class="clearfix"></div>
+
+<!--
+<script src="//buru.u.qiniudn.com/firebase-2.0.5.js"></script>
+<script src="/js/counter.js"></script>
+-->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script></footer>
+  <script src="/js/scale.fix.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+</script>
+
+</body>
+</html>
