@@ -74,7 +74,7 @@
       <p><strong>The Summary Of JS Learn.</strong><br><a id="more"></a></p>
 <p>这篇文章是对自己学习「智能社」JS 教程的总结。（本来是不需要造轮子的，但是自己参照学习的那个博客今天打开 404 了，所以还是自己打造一个）。</p>
 <h2 id="JS-运动基础01"><a href="#JS-运动基础01" class="headerlink" title="JS 运动基础01"></a>JS 运动基础01</h2><p>运动框架： </p>
-<p>先关闭计时器<br>再开计时器<br>再将运动和停止用 if / else 隔开</p>
+<p>先关闭计时器<br>再开计时器 <strong>这里一定要把定时器 timer 写在前头</strong><br>再将运动和停止用 if / else 隔开</p>
 <p>例子 1</p>
 <p></p><p data-height="300" data-theme-id="dark" data-slug-hash="OrEBzP" data-default-tab="js,result" data-user="mekeychen" data-pen-title="JS运动基础01" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/mekeychen/pen/OrEBzP/" target="_blank" rel="noopener">JS运动基础01</a> by hug2wisdom (<a href="https://codepen.io/mekeychen" target="_blank" rel="noopener">@mekeychen</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -86,6 +86,18 @@
 <p>例子3 </p>
 <p></p><p data-height="265" data-theme-id="dark" data-slug-hash="xmzMxX" data-default-tab="js,result" data-user="mekeychen" data-pen-title="淡入淡出" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/mekeychen/pen/xmzMxX/" target="_blank" rel="noopener">淡入淡出</a> by hug2wisdom (<a href="https://codepen.io/mekeychen" target="_blank" rel="noopener">@mekeychen</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="JS-运动基础02"><a href="#JS-运动基础02" class="headerlink" title="JS 运动基础02"></a>JS 运动基础02</h2><p>通过控制 speed 形成缓冲的视觉。这里需要注意的是 速度要取整数，计算机（浏览器）默认处理 （0 ，1）为 0，（-1， 0） 为 0，所以需要再 <code>speed &gt; 0</code> 的时候，使用 <code>Math.ceil(speed)</code>，在 <code>speed &lt; 0</code> 的时候使用 <code>Math.floor(speed)</code>，使得能达到正确的目的地。</p>
+<p>例子 1 </p>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="VqBQQE" data-default-tab="js,result" data-user="mekeychen" data-pen-title="缓冲运动" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/mekeychen/pen/VqBQQE/" target="_blank" rel="noopener">缓冲运动</a> by hug2wisdom (<a href="https://codepen.io/mekeychen" target="_blank" rel="noopener">@mekeychen</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p>例子 2 </p>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="gZjZdz" data-default-tab="css,result" data-user="mekeychen" data-pen-title="缓冲运动增强版" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/mekeychen/pen/gZjZdz/" target="_blank" rel="noopener">缓冲运动增强版</a> by hug2wisdom (<a href="https://codepen.io/mekeychen" target="_blank" rel="noopener">@mekeychen</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<p>例子 3</p>
+
     
   </div>
   <footer>
