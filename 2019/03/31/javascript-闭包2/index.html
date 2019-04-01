@@ -108,15 +108,18 @@
 
 
 
-  <meta name="keywords" content="javascript">
+  <meta name="description" content="只有表达式才能被执行。 立即执行函数立即执行函数的标准形式 1(function () &amp;#123;&amp;#125;()); 立即执行函数原理、演变 12345678910111213141516function test() &amp;#123;&amp;#125; // 函数声明，不是表达式，// 所以不可以有下面的形式：function test() &amp;#123;&amp;#125; ();// 函数表达式定义方式v">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript-闭包2">
 <meta property="og:url" content="http://laixiezi.com/2019/03/31/javascript-闭包2/index.html">
 <meta property="og:site_name" content="不坠落的蒲公英">
+<meta property="og:description" content="只有表达式才能被执行。 立即执行函数立即执行函数的标准形式 1(function () &amp;#123;&amp;#125;()); 立即执行函数原理、演变 12345678910111213141516function test() &amp;#123;&amp;#125; // 函数声明，不是表达式，// 所以不可以有下面的形式：function test() &amp;#123;&amp;#125; ();// 函数表达式定义方式v">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-31T12:43:54.220Z">
+<meta property="og:updated_time" content="2019-04-01T14:01:39.648Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript-闭包2">
+<meta name="twitter:description" content="只有表达式才能被执行。 立即执行函数立即执行函数的标准形式 1(function () &amp;#123;&amp;#125;()); 立即执行函数原理、演变 12345678910111213141516function test() &amp;#123;&amp;#125; // 函数声明，不是表达式，// 所以不可以有下面的形式：function test() &amp;#123;&amp;#125; ();// 函数表达式定义方式v">
 
 
 
@@ -405,12 +408,24 @@
                 
               
 
-              <time title="Created: 2019-03-31 20:43:16 / Modified: 20:43:54" itemprop="dateCreated datePublished" datetime="2019-03-31T20:43:16+08:00">2019-03-31</time>
+              <time title="Created: 2019-03-31 20:43:16" itemprop="dateCreated datePublished" datetime="2019-03-31T20:43:16+08:00">2019-03-31</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-04-01 22:01:39" itemprop="dateModified" datetime="2019-04-01T22:01:39+08:00">2019-04-01</time>
               
             
           </span>
@@ -462,6 +477,19 @@
 
       
         <a id="more"></a>
+<p><strong>只有表达式才能被执行。</strong></p>
+<h2 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h2><p>立即执行函数的标准形式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;());</span><br></pre></td></tr></table></figure>
+<p>立即执行函数原理、演变</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 函数声明，不是表达式，</span></span><br><span class="line"><span class="comment">// 所以不可以有下面的形式：</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125; ();</span><br><span class="line"><span class="comment">// 函数表达式定义方式</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="comment">//这个是可以立即执行的，因为这个是表达式，</span></span><br><span class="line"><span class="keyword">var</span> myFun = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125; ();</span><br><span class="line"><span class="comment">// 此时，执行完之后，myFun 就不能代表这个函数的定义了，因为函数已经被立即执行过了。</span></span><br><span class="line"><span class="comment">//以下的形式都可以是立即执行的。</span></span><br><span class="line">+<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;();</span><br><span class="line">-<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;();</span><br><span class="line">!<span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;();</span><br><span class="line"><span class="comment">// * / 不可以</span></span><br><span class="line"><span class="comment">// （ ）括号也会语句变为表达式</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;)();</span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125; ());</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 有闭包</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i += <span class="number">1</span>) &#123;</span><br><span class="line">    arr[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myArr = test();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j += <span class="number">1</span>) &#123;</span><br><span class="line">  myArr[j]();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 消除闭包,使用立即执行函数来解决</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i += <span class="number">1</span>) &#123;</span><br><span class="line">    (<span class="function"><span class="keyword">function</span> (<span class="params">j</span>) </span>&#123;</span><br><span class="line">      arr[j] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(j);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;(i));</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> myArr = test();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; <span class="number">10</span>; j += <span class="number">1</span>) &#123;</span><br><span class="line">  myArr[j]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Exercise:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    * &#123;</span></span><br><span class="line"><span class="undefined">      margin: 0;</span></span><br><span class="line"><span class="undefined">      padding: 0;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    ul &#123;</span></span><br><span class="line"><span class="undefined">      width: 200px;</span></span><br><span class="line"><span class="undefined">      height: 400px;</span></span><br><span class="line"><span class="undefined">      margin: 0 auto;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">    li:nth-of-type(2n) &#123;</span></span><br><span class="line"><span class="undefined">      background: #f40;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> aLi = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'li'</span>);</span></span><br><span class="line"><span class="javascript">      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aLi.length; i += <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="javascript">        (<span class="function"><span class="keyword">function</span> (<span class="params">j</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">          aLi[j].addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">// 加一个事件，相当于保存在外部</span></span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(j);</span></span><br><span class="line"><span class="javascript">          &#125;, <span class="literal">false</span>);</span></span><br><span class="line"><span class="undefined">        &#125;(i));</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">// 结果： 0 1 2 3</span><br></pre></td></tr></table></figure>
+<p><strong>不允许在 if 里面定义 函数</strong></p>
+<p><code>（ ）</code>括号 ,将括号里面的变成表达式。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span> (<span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125;) &#123;</span><br><span class="line">    	x += <span class="keyword">typeof</span> f;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">console</span>.log(x); <span class="comment">// "1undefined"</span></span><br><span class="line"><span class="comment">// function f() &#123;&#125; 不是 false ，所以 if 内部可以执行</span></span><br><span class="line"><span class="comment">// (function f() &#123;&#125;) 变为表达式 立即执行 所以 f 变为 undefined</span></span><br><span class="line"><span class="comment">// typeof undefined ，返回 "undefined"</span></span><br><span class="line"><span class="comment">// 最后 1 + "undefined"  ==  "1undefined"</span></span><br></pre></td></tr></table></figure>
+<p><strong>假：false 数字零 空字符串 null undefined 除了这 5 个 别的都是真的</strong></p>
+
       
     </div>
 
@@ -573,8 +601,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -717,6 +754,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#立即执行函数"><span class="nav-number">1.</span> <span class="nav-text">立即执行函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
